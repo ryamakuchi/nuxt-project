@@ -1,4 +1,5 @@
 import Vuex from 'vuex'
+
 const store = () => new Vuex.Store({
   state: {
     user: null
@@ -7,12 +8,12 @@ const store = () => new Vuex.Store({
     user: (state) => state.user
   },
   mutations: {
-    saveUser (state, {user}) {
+    saveUser(state, { user }) {
       state.user = user
     }
   },
   actions: {
-    async getUser ({ commit }, { id }) {
+    async getUser({ commit }, { id }) {
       try {
         const user = await this.$axios.$get(
           `https://api.github.com/users/${id}`
