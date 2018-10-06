@@ -20,6 +20,7 @@ module.exports = {
   modules: [
     '@nuxtjs/axios'
   ],
+  plugins: [ '~/plugins/logger' ],
   router: {
     middleware: ['redirector']
   },
