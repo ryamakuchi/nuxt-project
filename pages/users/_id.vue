@@ -8,6 +8,7 @@
 <script>
   import { mapGetters } from 'vuex'
   export default {
+    middleware: 'redirector',
     async asyncData ({ params, store }) {
       const { id } = params
       await store.dispatch('getUser', { id })
